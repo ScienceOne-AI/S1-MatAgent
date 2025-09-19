@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="S1-MatAgent: A planner driven multi-agent system for material discovery - ScienceOne">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="AI4M, High Entropy Alloys, Multi-Agent System, Material Discovery">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Xinrui Wang, Chengbo Li, Boxuan Zhang, Jiahui Shi, Nian Ran, Linjing Li, Jianjun Liu, Dajun Zeng">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="ScienceOne">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="S1-MatAgent: A planner driven multi-agent system for material discovery">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>S1-MatAgent: A planner driven multi-agent system for material discovery - ScienceOne</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "S1-MatAgent: A planner driven multi-agent system for material discovery",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Xinrui Wang",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "The discovery of high-performance materials is crucial for technological advancement. Inverse design using multi-agent systems (MAS) has become a promising solution for new material discovery. However, current MAS for materials research rely on predefined configurations, functions, and tools, which limits their adaptability and scalability when confronted with new tasks. To address these limitations, we developed a planner driven multi-agent system (S1-MatAgent). The planner can automatically decompose and dynamically plan complex materials design tasks, freely configure various tools according to requirements, significantly reducing reliance on manual workflow construction and specialized configuration. In the field of high-entropy alloy catalysts for hydrogen evolution reactions in alkaline conditions, S1-MatAgent successfully completed full-cycle closed-loop design from literature analysis and composition recommendation to performance optimization and experimental validation. To tackle the deviations between designed materials and target, as well as the high cost of experimental verification, S1-MatAgent employs a novel composition optimization algorithm based on the gradients of machine learning interatomic potential (MLIP), achieving 27.7 % improvement in material performance. The designed Ni4Co4Cu1Mo3Ru4 catalyst achieved an overpotential of 18.6 mV at 10 mA cm−2 and maintained 97.5 % activity after 500 hours at 500 mA cm−2. The universal MAS framework offers a universal and reliable solution for material discovery, significantly improving design efficiency and system adaptability.",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <!-- TODO: Replace with your lab's related works -->
+        <a href="https://scienceone.ia.ac.cn/" class="work-item" target="_blank">
+          <div class="work-info">
+            <!-- TODO: Replace with actual paper title -->
+            <h5>ScienceOne</h5>
+            <!-- TODO: Replace with brief description -->
+            <p>ScienceOne is a science foundation model developed by Chinease Academy of Sciences</p>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/ScienceOne-AI/DeepLiterature" class="work-item" target="_blank">
+          <div class="work-info">
+            <!-- TODO: Replace with actual paper title -->
+            <h5>Deep Literature</h5>
+            <!-- TODO: Replace with brief description -->
+            <p>DeepLiterature is an open-source science deep research framework.</p>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/ScienceOne-AI/DeepLiterature" class="work-item" target="_blank">
+          <div class="work-info">
+            <!-- TODO: Replace with actual paper title -->
+            <h5>AutoThink</h5>
+            <!-- TODO: Replace with brief description -->
+            <p>AutoThink is a reinforcement learning framework designed to equip R1-style language models with adaptive reasoning capabilities.</p>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">S1-MatAgent: A planner driven multi-agent system for material discovery</h1>
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your paper authors and their personal links -->
+                      <span class="author-block">
+                        <a target="_blank">Xinrui Wang</a><sup>1,2†</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Chengbo Li</a><sup>3,4†</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Boxuan Zhang</a><sup>1,2</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Jiahui Shi</a><sup>1,2*</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Nian Ran</a><sup>3,4*</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Linjing Li</a><sup>1,2</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Jianjun Liu</a><sup>3,4,5</sup>,
+                      </span>
+                      <span class="author-block">
+                        <a target="_blank">Dajun Zeng</a><sup>1,2</sup>
+                      </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">
+                      <sup>1</sup>State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, <br>Chinese Academy of Sciences
+                    </span>
+                    <span class="author-block">
+                      <sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Science
+                    </span>
+                    <span class="author-block">
+                      <sup>3</sup>State Key Laboratory of High Performance Ceramics, Shanghai Institute of Ceramics, <br>Chinese Academy of Sciences
+                    </span>
+                    <span class="author-block">
+                      <sup>4</sup>Center of Materials Science and Optoelectronics Engineering, <br>University of Chinese Academy of Sciences
+                    </span>
+                    <span class="author-block">
+                      <sup>5</sup>School of Chemistry and Materials Science, Hangzhou Institute for Advanced Study, <br>University of Chinese Academy of Sciences
+                    </span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><br><sup>*</sup>Corresponding to jiahui.shi@ia.ac.cn, rannian@mail.sic.ac.cn</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2509.14542.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+
+                    </span>
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/ScienceOne-AI/S1-MatAgent" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2509.14542" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Demo video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/s1-matagent.mp4" type="video/mp4">
+      </video>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+        S1-MatAgent empowers material Q&A, meterial calculation, and material design.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            The discovery of high-performance materials is crucial for technological advancement. Inverse design using multi-agent systems (MAS) shows great potential for new material discovery. 
+            However, current MAS for materials research rely on predefined configurations and tools, limiting their adaptability and scalability.
+            To address these limitations, we developed a planner driven multi-agent system (<strong>S1-MatAgent</strong>) which adopts a <strong>Planner-Executor</strong> architecture. 
+            Planner automatically decomposes complex materials design tasks, dynamically configures various tools to generate dedicated Executor agents for each subtask, significantly reducing reliance on manual workflow construction and specialized configuration.
+            Applied to high-entropy alloy catalysts for hydrogen evolution reactions in alkaline conditions, S1-MatAgent completed full-cycle closed-loop design from literature analysis and composition recommendation to performance optimization and experimental validation.
+            To tackle the deviations between designed materials and target, as well as high experimental verification costs, S1-MatAgent employs a novel composition optimization algorithm based on gradients of machine learning interatomic potential, achieving <strong>27.7 %</strong> improvement in material performance.
+            S1-MatAgent designed 13 high-performance catalysts from 20 million candidates, with <strong>Ni4Co4Cu1Mo3Ru4</strong> exhibiting an overpotential of <strong>18.6 mV</strong> at 10 mA cm−2 and maintaining <strong>97.5 %</strong> activity after 500 hours at 500 mA cm−2.
+            The universal MAS framework offers a universal and scalable solution for material discovery, significantly improving design efficiency and adaptability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">S1-MatAgent Architecture</h2>
+      <div class="level-set has-text-justified">
+        <img src="static/images/fig1.jpg" alt="S1-MatAgent Framework" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
+        <h2 class="subtitle has-text-centered">
+          <strong>S1-MatAgent: A planner driven multi-agent dynamic <br>collaborative system for material reverse design. </strong>
+        </h2>
+        <p>
+          <strong>S1-MatAgent</strong> adopts a <em>Planner-Executor</em> architecture which incorporates dynamic workflow generation and adaptive agent configuration. Acting as a central scheduler, the Planner interacts directly with the user to receive a root task, automatically builds task workflows, and automatically generates several Executors to solve each subtask. Executor here refers to a task-specific customized agent, which incorporates unique system messages and a dedicated toolset.
+        </p>
+      </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">HEA Design Task Execution</h2>
+      <div class="level-set has-text-justified">
+        <img src="static/images/fig2.jpg" alt="S1-MatAgent Framework" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
+        <h2 class="subtitle has-text-centered">
+          <strong>Execution process of all subtasks in the HEA design task. </strong>
+        </h2>
+        <p>
+          <strong>Executor</strong> 1.1 and 1.2 extract catalyst chemical formulas and the ten most frequent metal elements for HEAs based on given literature information, which significantly narrows down the search space (Fig. 2a-d). <strong>Executor</strong> 2.1 analyzes given literatures by the <strong><a href="https://scienceone.ia.ac.cn" target="_blank">ScienceOne</a></strong> model and generates potential compositions for further optimization (Fig. 2e and f). After that, <strong>Executor</strong> 2.2 iteratively optimizes previously recommended components based on mechanism modeling and MLIP gradients, forming the final candidate HEA for selection and synthesis by experimenters (Fig. 2g and h).</p>
+      </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">HEA Catalyst Evaluation and Optimization</h2>
+      <div class="level-set has-text-justified">
+        <img src="static/images/fig3.jpg" alt="Evaluation and Optimization of HER Activity in HEA" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
+        <h2 class="subtitle has-text-centered">
+          <strong>Evaluation and Optimization of HER Activity in HEA.</strong>
+        </h2>
+        <p>
+          a, Schematic diagram of HER activity assessment under alkaline conditions. b, Performance of the fine-tuned MACE model for energy prediction on the test set with partial enlarged region inserted. c, One-step optimization process of the gradient-based optimization algorithm. d, Performance Comparison of Different Component Optimization Algorithms. The solid lines represent the activity optimization process of the gradient-based algorithm and genetic algorithm for the same population of eight compositions, while the dashed line indicates the average activity before and after applying the gradient-based algorithm to all individual compositions.      </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">Experimental Validation</h2>
+      <div class="level-set has-text-justified">
+        <img src="static/images/fig4.jpg" alt="Characterizations and alkaline HER performance" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
+        <h2 class="subtitle has-text-centered">
+          <strong>Execution process of all subtasks in the HEA design task. </strong>
+        </h2>
+        <p>
+          a, LSV curves, b, overpotential values, c, Tafel values, d-e, EIS curves and Cdl values of Ni4Mo4Ru4Pd1Pt3, Ni5Fe3Mo4Ru1Pd3, Ni4Mo4Ru3Rh1Pt4, Ni4Fe4Mo4Pd1Pt3, and Ni4Co4Cu1Mo3Ru4. f, Stability test of Ni4Co4Cu1Mo3Ru4 at 500 mA cm−2 for 500 hrs. g-h, SEM image and elemental mapping of Ni4Co4Cu1Mo3Ru4.   </div>
+ </div>
+</div>
+</section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code">
+  <code>@article{s1-matagent2025,
+  title={S1-MatAgent: A planner driven multi-agent system for material discovery},
+  author={Xinrui Wang, Chengbo Li, Jiahui Shi, Nian Ran, Jianjun Liu, Boxuan Zhang, Linjing Li and Dajun Zeng},
+  journal={arxiv},
+  year={2025},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
