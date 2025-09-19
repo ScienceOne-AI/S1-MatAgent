@@ -18,7 +18,7 @@
 A Planner driven Multi Agent System for Material Discovery
     <br>
     <br>
-🔗 <a href="https://ScienceOne-AI.github.io/S1-MatAgent">Homepage</a> | 📑 <a href="https://arxiv.org/abs/2509.14542">Paper</a>
+🔗 <a href="https://glensjh.github.io/S1-MatAgent">Homepage</a> | 📑 <a href="https://arxiv.org/abs/2509.14542">Paper</a>
   </p>
 
 </div>
