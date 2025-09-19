@@ -220,7 +220,7 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="https://github.com/ScienceOne-AI/DeepLiterature" class="work-item" target="_blank">
+        <a href="https://github.com/ScienceOne-AI/AutoThink" class="work-item" target="_blank">
           <div class="work-info">
             <!-- TODO: Replace with actual paper title -->
             <h5>AutoThink</h5>
@@ -367,7 +367,7 @@
             Planner automatically decomposes complex materials design tasks, dynamically configures various tools to generate dedicated Executor agents for each subtask, significantly reducing reliance on manual workflow construction and specialized configuration.
             Applied to high-entropy alloy catalysts for hydrogen evolution reactions in alkaline conditions, S1-MatAgent completed full-cycle closed-loop design from literature analysis and composition recommendation to performance optimization and experimental validation.
             To tackle the deviations between designed materials and target, as well as high experimental verification costs, S1-MatAgent employs a novel composition optimization algorithm based on gradients of machine learning interatomic potential, achieving <strong>27.7 %</strong> improvement in material performance.
-            S1-MatAgent designed 13 high-performance catalysts from 20 million candidates, with <strong>Ni4Co4Cu1Mo3Ru4</strong> exhibiting an overpotential of <strong>18.6 mV</strong> at 10 mA cm−2 and maintaining <strong>97.5 %</strong> activity after 500 hours at 500 mA cm−2.
+            S1-MatAgent designed 13 high-performance catalysts from 20 million candidates, with <strong>Ni<sub>4</sub>Co<sub>4</sub>Cu<sub>1</sub>Mo<sub>3</sub>Ru<sub>4</sub></strong> exhibiting an overpotential of <strong>18.6 mV</strong> at 10 mA cm<sup>−2</sup> and maintaining <strong>97.5 %</strong> activity after 500 hours at 500 mA cm<sup>−2</sup>.
             The universal MAS framework offers a universal and scalable solution for material discovery, significantly improving design efficiency and adaptability.
           </p>
         </div>
@@ -387,7 +387,7 @@
       <div class="level-set has-text-justified">
         <img src="static/images/fig1.jpg" alt="S1-MatAgent Framework" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
         <h2 class="subtitle has-text-centered">
-          <strong>S1-MatAgent: A planner driven multi-agent dynamic <br>collaborative system for material reverse design. </strong>
+          <strong>Fig.1 S1-MatAgent: A planner driven multi-agent dynamic <br>collaborative system for material reverse design. </strong>
         </h2>
         <p>
           <strong>S1-MatAgent</strong> adopts a <em>Planner-Executor</em> architecture which incorporates dynamic workflow generation and adaptive agent configuration. Acting as a central scheduler, the Planner interacts directly with the user to receive a root task, automatically builds task workflows, and automatically generates several Executors to solve each subtask. Executor here refers to a task-specific customized agent, which incorporates unique system messages and a dedicated toolset.
@@ -407,7 +407,7 @@
       <div class="level-set has-text-justified">
         <img src="static/images/fig2.jpg" alt="S1-MatAgent Framework" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
         <h2 class="subtitle has-text-centered">
-          <strong>Execution process of all subtasks in the HEA design task. </strong>
+          <strong>Fig.2 Execution process of all subtasks in the HEA design task. </strong>
         </h2>
         <p>
           <strong>Executor</strong> 1.1 and 1.2 extract catalyst chemical formulas and the ten most frequent metal elements for HEAs based on given literature information, which significantly narrows down the search space (Fig. 2a-d). <strong>Executor</strong> 2.1 analyzes given literatures by the <strong><a href="https://scienceone.ia.ac.cn" target="_blank">ScienceOne</a></strong> model and generates potential compositions for further optimization (Fig. 2e and f). After that, <strong>Executor</strong> 2.2 iteratively optimizes previously recommended components based on mechanism modeling and MLIP gradients, forming the final candidate HEA for selection and synthesis by experimenters (Fig. 2g and h).</p>
@@ -426,11 +426,13 @@
       <div class="level-set has-text-justified">
         <img src="static/images/fig3.jpg" alt="Evaluation and Optimization of HER Activity in HEA" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
         <h2 class="subtitle has-text-centered">
-          <strong>Evaluation and Optimization of HER Activity in HEA.</strong>
+          <strong>Fig.3 Evaluation and Optimization of HER Activity in HEA.</strong>
         </h2>
         <p>
-          a, Schematic diagram of HER activity assessment under alkaline conditions. b, Performance of the fine-tuned MACE model for energy prediction on the test set with partial enlarged region inserted. c, One-step optimization process of the gradient-based optimization algorithm. d, Performance Comparison of Different Component Optimization Algorithms. The solid lines represent the activity optimization process of the gradient-based algorithm and genetic algorithm for the same population of eight compositions, while the dashed line indicates the average activity before and after applying the gradient-based algorithm to all individual compositions.      </div>
-   </div>
+          We provided a HEA structure generation tool and established a HER activity evaluation model based on the Volmer-Tafel mechanism in combination with MLIP (Fig. 3a).
+          Specifically, we fine-tuned a MACE model to achieve precise simulation of the HER process of HEA, and the RMSE for energy prediction of this model on the test set is only <strong>3.3 meV per atom</strong> (Fig. 3b).
+          S1-MatAgent is equipped with <strong>a novel gradient-based catalyst optimization algorithm</strong>, and the one-step process of it is shown in figure 3c. 
+          After 10 iterations, our algorithm increased the highest HER activity of a population with an average final activity <strong>2.4 times</strong> higher than that of the genetic algorithm and increase in the first round being <strong>2.8 times</strong> greater, while the average individual activity improved from -21.12 to -15.28, representing a significant increase of <strong>27.7 %</strong> (Fig. 3d).   </div>
  </div>
 </div>
 </section>
@@ -444,11 +446,11 @@
       <div class="level-set has-text-justified">
         <img src="static/images/fig4.jpg" alt="Characterizations and alkaline HER performance" class="blend-img-background center-image" style="width: 100%; height: auto;" loading="lazy">
         <h2 class="subtitle has-text-centered">
-          <strong>Execution process of all subtasks in the HEA design task. </strong>
+          <strong>Fig.4 Execution process of all subtasks in the HEA design task. </strong>
         </h2>
         <p>
-          a, LSV curves, b, overpotential values, c, Tafel values, d-e, EIS curves and Cdl values of Ni4Mo4Ru4Pd1Pt3, Ni5Fe3Mo4Ru1Pd3, Ni4Mo4Ru3Rh1Pt4, Ni4Fe4Mo4Pd1Pt3, and Ni4Co4Cu1Mo3Ru4. f, Stability test of Ni4Co4Cu1Mo3Ru4 at 500 mA cm−2 for 500 hrs. g-h, SEM image and elemental mapping of Ni4Co4Cu1Mo3Ru4.   </div>
- </div>
+          We selected five materials suitable for laboratory synthesis for experimental verification, and figure 4 shows their electrochemical performances and morphology characterizations.
+          We found <strong>Ni<sub>4</sub>Co<sub>4</sub>Cu<sub>1</sub>Mo<sub>3</sub>Ru<sub>4</sub></strong> exhibiting an overpotential of <strong>18.6 mV</strong> at 10 mA cm<sup>−2</sup> and maintaining <strong>97.5 %</strong> activity after 500 hours at 500 mA cm<sup>−2</sup>. </div>
 </div>
 </section>
 
